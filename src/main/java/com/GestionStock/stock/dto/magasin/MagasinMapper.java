@@ -8,6 +8,8 @@ import com.GestionStock.stock.model.Magasin;
 import com.GestionStock.stock.service.EntrepriseService;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class MagasinMapper implements GenericMapper<Magasin, MagasinDto, MagasinResponseDto> {
     private final EntrepriseService entrepriseService;
@@ -32,6 +34,7 @@ public class MagasinMapper implements GenericMapper<Magasin, MagasinDto, Magasin
                 .address(magasin.getAddress())
                 .ville(magasin.getVille())
                 .name(magasin.getName())
+                .idEntreprise(magasin.getEntreprise().getIdEntreprise())
                 .createdAt(magasin.getCreatedAt())
                 .build();
     }
@@ -45,9 +48,12 @@ public class MagasinMapper implements GenericMapper<Magasin, MagasinDto, Magasin
                 .tel(magasin.getTel())
                 .address(magasin.getAddress())
                 .ville(magasin.getVille())
+                .idEntreprise(magasin.getEntreprise().getIdEntreprise())
                 .name(magasin.getName())
                 .createdAt(magasin.getCreatedAt())
-                .entreprise(entrepriseMapper.toDto(magasin.getEntreprise()))
+                //.rayons(List.copyOf(magasin.getRayons()))
+                //.stocks(List.copyOf(magasin.getStocks()))
+                .entreprise(entrepriseMapper.toResponseDto(magasin.getEntreprise()))
                 .build();
     }
 

@@ -5,6 +5,7 @@ import com.GestionStock.stock.dto.entreprise.EntrepriseDto;
 import com.GestionStock.stock.dto.vente.VenteDto;
 import com.GestionStock.stock.model.Client;
 import com.GestionStock.stock.model.Entreprise;
+import com.GestionStock.stock.model.Vente;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -28,5 +29,5 @@ public class ClientResponseDto {
     private LocalDateTime createdAt;
     private long idEntreprise;
     private EntrepriseDto entreprise;
-    private List<VenteDto> ventes;
+    //private List<Vente> ventes;
 }

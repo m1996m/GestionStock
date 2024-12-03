@@ -7,6 +7,8 @@ import com.GestionStock.stock.model.Entreprise;
 import com.GestionStock.stock.service.EntrepriseService;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class ClientMapper implements GenericMapper<Client, ClientDto, ClientResponseDto> {
 
@@ -45,7 +47,9 @@ public class ClientMapper implements GenericMapper<Client, ClientDto, ClientResp
                 .address(entity.getAddress())
                 .slug(entity.getSlug())
                 .genre(entity.getGenre())
+                //.ventes(List.copyOf(entity.getVentes()))
                 .createdAt(entity.getCreatedAt())
+                .idEntreprise(entity.getEntreprise().getIdEntreprise())
                 .idEntreprise(entity.getEntreprise().getIdEntreprise())
                 .build();
     }

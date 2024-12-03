@@ -45,11 +45,13 @@ public class LigneVenteMapper implements GenericMapper<LigneVente, LigneVenteDto
     public LigneVenteResponseDto toResponseDto(LigneVente ligneVente) {
         return LigneVenteResponseDto.builder()
                 .idLigneVente(ligneVente.getIdLigneVente())
-                .vente(venteMapper.toDto(ligneVente.getVente()))
+                .vente(venteMapper.toResponseDto(ligneVente.getVente()))
                 .puv(ligneVente.getPuv())
                 .createdAt(ligneVente.getCreatedAt())
-                .produit(produitMapper.toDto(ligneVente.getProduit()))
+                .produit(produitMapper.toResponseDto(ligneVente.getProduit()))
                 .quantite(ligneVente.getQuantite())
+                .idProduit(ligneVente.getProduit().getIdProduit())
+                .idVente(ligneVente.getVente().getIdVente())
                 .slug(ligneVente.getSlug())
                 .build();
     }

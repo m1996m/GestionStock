@@ -6,6 +6,8 @@ import com.GestionStock.stock.generic.GenericMapper;
 import com.GestionStock.stock.model.Users;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class UserMapper implements GenericMapper<Users, UserDto, UserResponseDto> {
     private final MagasinMapper magasinMapper;
@@ -45,7 +47,8 @@ public class UserMapper implements GenericMapper<Users, UserDto, UserResponseDto
                 .role(users.getRole())
                 .createdAt(users.getCreatedAt())
                 .entreprise(entrepriseDto.toDto(users.getEntreprise()))
-                .magasin(magasinMapper.toDto(users.getMagasin()))
+                .magasin(magasinMapper.toResponseDto(users.getMagasin()))
+                .ventes(List.copyOf(users.getVentes()))
                 .build();
     }
 

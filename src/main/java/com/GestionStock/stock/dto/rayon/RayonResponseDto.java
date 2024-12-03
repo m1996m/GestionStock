@@ -1,8 +1,10 @@
 package com.GestionStock.stock.dto.rayon;
 
 import com.GestionStock.stock.dto.magasin.MagasinDto;
+import com.GestionStock.stock.dto.magasin.MagasinResponseDto;
 import com.GestionStock.stock.dto.produit.ProduitDto;
 import com.GestionStock.stock.model.Magasin;
+import com.GestionStock.stock.model.Produit;
 import com.GestionStock.stock.model.Rayon;
 import lombok.*;
 
@@ -22,6 +24,6 @@ public class RayonResponseDto {
     private String slug;
     private LocalDateTime createdAt;
     private Long idMagasin;
-    private MagasinDto magasin;
-    private List<ProduitDto> produits;
+    private MagasinResponseDto magasin;
+    //private List<Produit> produits;
 }

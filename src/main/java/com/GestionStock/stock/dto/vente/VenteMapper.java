@@ -1,18 +1,21 @@
 package com.GestionStock.stock.dto.vente;
 
 import com.GestionStock.stock.dto.client.ClientMapper;
+import com.GestionStock.stock.dto.ligneVente.LigneVenteMapper;
 import com.GestionStock.stock.dto.magasin.MagasinMapper;
 import com.GestionStock.stock.dto.user.UserMapper;
 import com.GestionStock.stock.generic.GenericMapper;
-import com.GestionStock.stock.model.Client;
-import com.GestionStock.stock.model.Magasin;
-import com.GestionStock.stock.model.Users;
-import com.GestionStock.stock.model.Vente;
+import com.GestionStock.stock.model.*;
 import com.GestionStock.stock.service.ClientService;
 import com.GestionStock.stock.service.MagasinService;
 import com.GestionStock.stock.service.UserService;
 import com.GestionStock.stock.service.VenteService;
 import org.springframework.stereotype.Component;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Component
 public class VenteMapper implements GenericMapper<Vente, VenteDto, VenteResponseDto> {
@@ -54,9 +57,10 @@ public class VenteMapper implements GenericMapper<Vente, VenteDto, VenteResponse
                 .slug(vente.getSlug())
                 .createdAt(vente.getCreatedAt())
                 .dateVente(vente.getDateVente())
-                //.client(clientMapper.toDto(vente.getClient()))
-                .magasin(magasinMapper.toDto(vente.getMagasin()))
-                .user(userDto.toDto(vente.getUser()))
+                .client(clientMapper.toResponseDto(vente.getClient()))
+                .magasin(magasinMapper.toResponseDto(vente.getMagasin()))
+                .user(userDto.toResponseDto(vente.getUser()))
+                //.ligneVentes(List.copyOf(vente.getLigneVentes()))
                 .build();
     }
 

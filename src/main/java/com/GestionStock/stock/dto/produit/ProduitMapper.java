@@ -8,6 +8,8 @@ import com.GestionStock.stock.service.ProduitService;
 import com.GestionStock.stock.service.RayonService;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class ProduitMapper implements GenericMapper<Produit, ProduitDto, ProduitResponseDto> {
     private final ProduitService produitService;
@@ -46,7 +48,8 @@ public class ProduitMapper implements GenericMapper<Produit, ProduitDto, Produit
                 .slug(produit.getSlug())
                 .prix(produit.getPrix())
                 .createdAt(produit.getCreatedAt())
-                .rayon(rayonMapper.toDto(produit.getRayon()))
+                //.ligneVentes(List.copyOf(produit.getLigneVentes()))
+                .rayon(rayonMapper.toResponseDto(produit.getRayon()))
                 .build();
     }
 

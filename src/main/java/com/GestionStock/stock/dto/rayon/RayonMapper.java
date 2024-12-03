@@ -9,6 +9,8 @@ import com.GestionStock.stock.service.MagasinService;
 import com.GestionStock.stock.service.RayonService;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class RayonMapper implements GenericMapper<Rayon,RayonDto, RayonResponseDto> {
     private final RayonService rayonService;
@@ -41,7 +43,8 @@ public class RayonMapper implements GenericMapper<Rayon,RayonDto, RayonResponseD
                 .createdAt(rayon.getCreatedAt())
                 .description(rayon.getDescription())
                 .slug(rayon.getSlug())
-                .magasin(magasinMapper.toDto(rayon.getMagasin()))
+                .magasin(magasinMapper.toResponseDto(rayon.getMagasin()))
+                //.produits(List.copyOf(rayon.getProduits()))
                 .build();
     }
 

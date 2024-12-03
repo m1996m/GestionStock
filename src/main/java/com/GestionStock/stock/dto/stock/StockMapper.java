@@ -40,7 +40,8 @@ public class StockMapper implements GenericMapper<Stock, StockDto, StockResponse
                 .createdAt(stock.getCreatedAt())
                 .description(stock.getDescription())
                 .slug(stock.getSlug())
-                .magasin(magasinMapper.toDto(stock.getMagasin()))
+                .idMagasin(stock.getMagasin().getIdMagasin())
+                .magasin(magasinMapper.toResponseDto(stock.getMagasin()))
                 .build();
     }
 

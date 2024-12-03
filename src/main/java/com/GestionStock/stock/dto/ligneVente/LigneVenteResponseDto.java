@@ -1,7 +1,9 @@
 package com.GestionStock.stock.dto.ligneVente;
 
 import com.GestionStock.stock.dto.produit.ProduitDto;
+import com.GestionStock.stock.dto.produit.ProduitResponseDto;
 import com.GestionStock.stock.dto.vente.VenteDto;
+import com.GestionStock.stock.dto.vente.VenteResponseDto;
 import com.GestionStock.stock.model.LigneVente;
 import com.GestionStock.stock.model.Produit;
 import com.GestionStock.stock.model.Vente;
@@ -23,6 +25,6 @@ public class LigneVenteResponseDto {
     private LocalDateTime createdAt;
     private long idVente;
     private long idProduit;
-    private VenteDto vente;
-    private ProduitDto produit;
+    private VenteResponseDto vente;
+    private ProduitResponseDto produit;
 }

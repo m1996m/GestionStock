@@ -32,8 +32,8 @@ public class LigneVenteController extends GenericController<LigneVente, String, 
     }
 
     @GetMapping("/vente/{id}")
-    public List<LigneVenteDto> getVenteByPeriode(@PathVariable long id){
+    public List<LigneVenteResponseDto> getVenteByPeriode(@PathVariable long id){
         List<LigneVente> ligneVente = ligneVenteService.findDynamicByOneTable("vente","idVente", id);
-       return ligneVente.stream().map(ligneVenteMapper::toDto).toList();
+       return ligneVente.stream().map(ligneVenteMapper::toResponseDto).toList();
     }
 }

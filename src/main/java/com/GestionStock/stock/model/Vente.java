@@ -3,12 +3,14 @@ package com.GestionStock.stock.model;
 import com.GestionStock.stock.global.CodeVenteGenerator;
 import com.GestionStock.stock.global.SlugGenerator;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Builder
@@ -52,4 +54,8 @@ public class Vente {
     @ManyToOne
     @JoinColumn(name = "idUser")
     private Users user;
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "vente")
+    private Set<LigneVente> ligneVentes;
 }

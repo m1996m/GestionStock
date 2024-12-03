@@ -1,9 +1,12 @@
 package com.GestionStock.stock.dto.produit;
 
 import com.GestionStock.stock.dto.ligneVente.LigneVenteDto;
+import com.GestionStock.stock.dto.ligneVente.LigneVenteResponseDto;
 import com.GestionStock.stock.dto.produitStock.ProduitStockDto;
 import com.GestionStock.stock.dto.rayon.RayonDto;
+import com.GestionStock.stock.dto.rayon.RayonResponseDto;
 import com.GestionStock.stock.model.EmplacementProduit;
+import com.GestionStock.stock.model.LigneVente;
 import com.GestionStock.stock.model.Produit;
 import com.GestionStock.stock.model.Rayon;
 import lombok.*;
@@ -27,8 +30,8 @@ public class ProduitResponseDto {
     private String slug;
     private LocalDateTime createdAt;
     private long idRayon;
-    private RayonDto rayon;
+    private RayonResponseDto rayon;
     private List<ProduitStockDto> produitStocks;
-    private List<LigneVenteDto> ligneVentes;
-    private List<EmplacementProduit> emplacementProduits;
+    //private List<LigneVente> ligneVentes;
+    //private List<EmplacementProduit> emplacementProduits;
 }

@@ -5,9 +5,11 @@ import com.GestionStock.stock.ListEnumeration.Role;
 import com.GestionStock.stock.dto.entreprise.EntrepriseDto;
 import com.GestionStock.stock.dto.magasin.MagasinDto;
 import com.GestionStock.stock.dto.magasin.MagasinMapper;
+import com.GestionStock.stock.dto.magasin.MagasinResponseDto;
 import com.GestionStock.stock.dto.vente.VenteDto;
 import com.GestionStock.stock.model.Entreprise;
 import com.GestionStock.stock.model.Users;
+import com.GestionStock.stock.model.Vente;
 import lombok.*;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -35,9 +37,7 @@ public class UserResponseDto {
     private LocalDateTime createdAt;
     private long idEntreprise;
     private long idMagasin;
-    private MagasinDto magasin;
+    private MagasinResponseDto magasin;
     private EntrepriseDto entreprise;
-    private List<VenteDto> ventes;
-    private EntrepriseDto entrepriseDto;
-    private MagasinMapper magasinMapper;
+    private List<Vente> ventes;
 }

@@ -1,6 +1,7 @@
 package com.GestionStock.stock.dto.stock;
 
 import com.GestionStock.stock.dto.magasin.MagasinDto;
+import com.GestionStock.stock.dto.magasin.MagasinResponseDto;
 import com.GestionStock.stock.dto.produitStock.ProduitStockDto;
 import com.GestionStock.stock.model.Magasin;
 import com.GestionStock.stock.model.Stock;
@@ -22,6 +23,6 @@ public class StockResponseDto {
     private String slug;
     private LocalDateTime createdAt;
     private long idMagasin;
-    private MagasinDto magasin;
+    private MagasinResponseDto magasin;
     private List<ProduitStockDto> produitStocks;
 }
