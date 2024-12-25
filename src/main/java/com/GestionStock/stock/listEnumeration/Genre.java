@@ -1,4 +1,4 @@
-package com.GestionStock.stock.ListEnumeration;
+package com.GestionStock.stock.listEnumeration;
 
 import lombok.Getter;
 
@@ -13,6 +13,5 @@ public enum Genre {
     Genre(String displayName) {
         this.displayName = displayName;
     }
-
 }
 

@@ -1,18 +1,11 @@
 package com.GestionStock.stock.dto.user;
 
-import com.GestionStock.stock.ListEnumeration.Genre;
-import com.GestionStock.stock.ListEnumeration.Role;
+import com.GestionStock.stock.listEnumeration.Genre;
+import com.GestionStock.stock.listEnumeration.Role;
 import com.GestionStock.stock.dto.entreprise.EntrepriseDto;
-import com.GestionStock.stock.dto.magasin.MagasinDto;
-import com.GestionStock.stock.dto.magasin.MagasinMapper;
 import com.GestionStock.stock.dto.magasin.MagasinResponseDto;
-import com.GestionStock.stock.dto.vente.VenteDto;
-import com.GestionStock.stock.model.Entreprise;
-import com.GestionStock.stock.model.Users;
 import com.GestionStock.stock.model.Vente;
 import lombok.*;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDateTime;
 import java.util.List;

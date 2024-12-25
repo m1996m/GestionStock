@@ -1,7 +1,7 @@
 package com.GestionStock.stock.model;
 
-import com.GestionStock.stock.ListEnumeration.Genre;
-import com.GestionStock.stock.ListEnumeration.Role;
+import com.GestionStock.stock.listEnumeration.Genre;
+import com.GestionStock.stock.listEnumeration.Role;
 import com.GestionStock.stock.global.SlugGenerator;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;

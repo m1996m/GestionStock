@@ -1,6 +1,6 @@
 package com.GestionStock.stock.model;
 
-import com.GestionStock.stock.ListEnumeration.Genre;
+import com.GestionStock.stock.listEnumeration.Genre;
 import com.GestionStock.stock.global.SlugGenerator;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -9,7 +9,6 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Set;
 
 @Entity

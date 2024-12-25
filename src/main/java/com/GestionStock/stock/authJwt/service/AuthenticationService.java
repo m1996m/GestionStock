@@ -42,8 +42,6 @@ public class AuthenticationService {
         Entreprise entreprise = entrepriseService.findById(userDto.getIdEntreprise());
         Users user = userDto.create(userDto, entreprise);
         user.setPassword(passwordEncoder.encode(userDto.getPassword()));
-        //user.setEmail(userDto.getEmail());
-        //user.setPassword(passwordEncoder.encode(input.getPassword()));
 
         return userRepository.save(user);
     }

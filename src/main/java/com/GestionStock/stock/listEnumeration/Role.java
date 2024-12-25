@@ -1,4 +1,4 @@
-package com.GestionStock.stock.ListEnumeration;
+package com.GestionStock.stock.listEnumeration;
 
 import lombok.Getter;
 

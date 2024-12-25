@@ -1,14 +1,11 @@
 package com.GestionStock.stock.dto.client;
 
-import com.GestionStock.stock.ListEnumeration.Genre;
-import com.GestionStock.stock.dto.entreprise.EntrepriseDto;
-import com.GestionStock.stock.dto.vente.VenteDto;
+import com.GestionStock.stock.listEnumeration.Genre;
 import com.GestionStock.stock.model.Client;
 import com.GestionStock.stock.model.Entreprise;
 import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Builder
 @NoArgsConstructor
